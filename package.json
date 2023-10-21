@@ -1,12 +1,24 @@
 {
   "name": "turbotree",
   "type": "module",
-  "version": "1.0.0",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "version": "1.0.1",
+  "description": "use turbo and turbowatch to intelligently watch your whole monorepo",
+  "homepage": "https://github.com/mattieb/turbotree",
+  "license": "MIT",
+  "author": {
+    "name": "Mattie Behrens",
+    "email": "mattie@mattiebee.io",
+    "url": "https://mattiebee.io"
+  },
   "files": [
     "./lib"
   ],
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattieb/turbotree.git"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rimraf lib",
@@ -18,18 +30,18 @@
       "prettier-plugin-organize-imports"
     ]
   },
+  "dependencies": {
+    "supports-color": "^9.4.0",
+    "turbowatch": "^2.29.4",
+    "workspace-tools": "^0.36.3",
+    "zx": "^7.2.3"
+  },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.2",
     "prettier": "^3.0.3",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.2.2"
-  },
-  "dependencies": {
     "prettier-plugin-organize-imports": "^3.2.3",
-    "supports-color": "^9.4.0",
-    "turbowatch": "^2.29.4",
+    "rimraf": "^5.0.5",
     "type-fest": "^4.5.0",
-    "workspace-tools": "^0.36.3",
-    "zx": "^7.2.3"
+    "typescript": "^5.2.2"
   }
 }
