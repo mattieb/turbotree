@@ -1,0 +1,35 @@
+{
+  "name": "turbotree",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "./lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepare": "npm run build",
+    "watch": "tsc -w"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ]
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.2",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "supports-color": "^9.4.0",
+    "turbowatch": "^2.29.4",
+    "type-fest": "^4.5.0",
+    "workspace-tools": "^0.36.3",
+    "zx": "^7.2.3"
+  }
+}
