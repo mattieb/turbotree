@@ -12,17 +12,11 @@ turbotree works with monorepos based on [workspaces](https://docs.npmjs.com/cli/
 Here's a complete example "watch.ts" script:
 
 ```typescript
-import {
-  KickstartContext,
-  PackageInfo,
-  Trigger,
-  basicBuildWatch,
-  watchTree,
-} from "turbotree";
+import { KickstartContext, PackageInfo, Trigger, watchTree } from "turbotree";
 
 const triggers = (p: PackageInfo): Trigger[] => [
   {
-    expression: basicBuildWatch(p),
+    expression: tsViteBuild(p),
     name: `${p.name}:build`,
     initialRun: false,
     onChange: async ({ spawn, files }) => {

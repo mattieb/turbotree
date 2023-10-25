@@ -1,7 +1,7 @@
 {
   "name": "turbotree",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2-alpha.0",
   "description": "use turbo and turbowatch to intelligently watch your whole monorepo",
   "homepage": "https://github.com/mattieb/turbotree",
   "license": "MIT",
@@ -17,10 +17,11 @@
   "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattieb/turbotree.git"
+    "url": "git+https://github.com/mattieb/turbotree.git"
   },
   "scripts": {
     "build": "tsc",
+    "bump:alpha": "npm version prerelease --no-git-tag-version --preid=alpha",
     "clean": "rimraf lib",
     "prepare": "npm run build",
     "watch": "tsc -w"
